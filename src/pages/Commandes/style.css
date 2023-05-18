@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .table_wrapper {
+    @apply overflow-auto table-fixed text-base shadow-md h-[74%] rounded-md;
+  }
+  .table_wrapper table {
+    @apply border-collapse border-hidden  w-full table-auto overflow-hidden;
+  }
+  .head {
+    @apply bg-[#F2F2F2] text-xs min-h-0 min-w-fit;
+  }
+  .table_wrapper th {
+    @apply text-left px-4 py-0 min-w-0 min-h-[32px];
+  }
+  .table_wrapper td {
+    @apply px-4 py-2 border-l-[2px] border-r-[2px] border-r-[#F3F3F3] min-w-0
+    border-l-[#F3F3F3] text-left text-sm;
+  }
+  .table_wrapper tr {
+    @apply even:bg-[rgba(242,242,242,0.4)];
+  }
+  .small_btn {
+    @apply h-8 w-8 !min-w-0 !bg-[#F2F2F2] rounded-md shadow-md text-center
+     flex justify-center items-center hover:shadow-xl m-auto !text-[rgba(223,208,242)];
+  }
+  .search_bar {
+    @apply relative h-11 w-1/3 medium:w-[300px] rounded-md bg-[#F2F2F2] flex items-center p-4;
+  }
+  .search_bar input {
+    @apply bg-transparent cursor-text ml-4 focus:outline-none w-full;
+  }
+  .pagination_wrapper {
+    @apply w-full flex flex-row justify-start items-center gap-[10px] mb-4 medium:justify-center;
+  }
+  .page_btn {
+    @apply h-12 w-12 !min-w-0 !bg-[#FFFFFF] !rounded-lg !shadow-md text-center
+     flex !justify-center !items-center hover:!shadow-xl leading-tight
+      focus:outline-none focus:ring-0 cursor-pointer
+     active:!bg-[rgba(223,208,242)] !text-black active:shadow-lg transition duration-75 ease-in-out;
+  }
+  .options_wrapper {
+    @apply h-64 w-60 flex flex-col justify-evenly shadow-sm rounded-md;
+  }
+  .header_container {
+    @apply flex flex-row justify-between small:flex-col small:justify-center small:items-center mt-2;
+  }
+  .filters_container {
+    @apply w-full flex flex-row justify-start gap-4 mb-4 small:flex-col small:justify-center small:items-center;
+  }
+  .buttons_container {
+    @apply flex flex-row justify-end gap-4 mb-4 small:flex-col;
+  }
+  .round_btn {
+    @apply !rounded-full !bg-[#F2F2F2] h-12 w-12 !min-w-0 shadow-sm mx-0 cursor-pointer
+     flex !justify-center !text-[#5103B7] !items-center hover:shadow-xl m-auto
+     small:!w-[300px] small:!rounded-md small:!justify-between small:!px-4;
+  }
+  .footer_container {
+    @apply flex flex-row justify-between items-center mt-4 medium:flex-col;
+  }
+  .loader {
+    @apply flex flex-col justify-center items-center h-screen text-center text-xl text-[#3F0291];
+  }
+
+  /*------ ajout form style------*/
+  .ajout_form_wrap {
+    @apply absolute top-1/2 left-1/2 bg-white translate-x-[-50%]  h-fit 
+    translate-y-[-50%] rounded-2xl p-2  w-[864px] medium:w-[425px] 
+     medium:mb-4 mobile:!w-[325px]
+    drop-shadow-[0px_16px_16px_rgba(0,0,0,0.161)];
+  }
+  .ajout_header1 {
+    @apply flex flex-row justify-between font-bold text-sm;
+  }
+  .ajout_header2 {
+    @apply grid grid-cols-2 font-bold text-base text-center;
+  }
+  .form_corps {
+    @apply grid grid-cols-2 gap-4 medium:grid-cols-1;
+  }
+  /*-----input component style-----*/
+  .input_wrap {
+    @apply h-12 bg-[#F2F2F2] rounded-md px-2;
+  }
+  .input_wrap input {
+    @apply outline-none border-none bg-transparent text-[14px] text-[#707070];
+  }
+  .input_date {
+    @apply h-11 bg-[#F2F2F2] rounded-md px-4;
+  }
+  .input_date input {
+    @apply outline-none border-none bg-transparent text-[14px] font-bold w-20;
+  }
+  .select_all_wrap {
+    @apply rounded-lg h-8 flex justify-center items-center drop-shadow-[0px_1px_3px_rgba(0,0,0,0.161)];
+  }
+  /*------ confirmation form style------*/
+  .confirmation_form_wrap {
+    @apply absolute top-1/2 left-1/2 bg-white translate-x-[-50%] w-[378px] h-fit 
+    translate-y-[-50%] rounded-2xl p-4 mobile:w-[325px]
+    drop-shadow-[0px_16px_16px_rgba(0,0,0,0.161)];
+  }
+  .confirmation_body {
+    @apply font-bold text-sm text-center;
+  }
+  /*------ modification form style------*/
+  .modification_form_wrap {
+    @apply absolute top-1/2 left-1/2 bg-white translate-x-[-50%] w-[432px] h-fit 
+    translate-y-[-50%] rounded-2xl p-4 mobile:w-[325px]
+    drop-shadow-[0px_16px_16px_rgba(0,0,0,0.161)];
+  }
+  .modification_from_body {
+    @apply flex flex-col justify-start items-center gap-4;
+  }
+}

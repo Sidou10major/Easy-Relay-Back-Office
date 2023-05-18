@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .ajout_header1 {
+    @apply flex flex-row justify-between font-bold text-sm;
+  }
+}

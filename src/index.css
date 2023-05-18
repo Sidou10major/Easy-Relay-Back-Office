@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+@layer base {
+  .sidebar_wrap {
+    @apply bg-white justify-center text-black text-center w-[15%] medium:w-14
+    min-w-[56px] h-screen drop-shadow-[1px_0px_6px_rgba(0,0,0,0.078)] z-[98];
+  }
+  .children_wrap {
+    @apply block bg-white h-screen overflow-y-scroll px-2 w-full 
+    max-w-[82%] items-center medium:max-w-full
+    no-scrollbar;
+  }
+  .grayout {
+    @apply fixed top-0 right-0 left-0 bottom-0 bg-[rgba(0,0,0,0.36)] z-[99] overflow-scroll
+    no-scrollbar;
+  }
+}
+.react-next-dates {
+  --color-primary: #dfd0f2;
+  --color-grey: #6b6d77;
+  --color-light-grey: #f2f2f2;
+  --color-dark-grey: #2c2e3d;
+  --color-white: #ffffff;
+  --color-dark: #000000;
+}
